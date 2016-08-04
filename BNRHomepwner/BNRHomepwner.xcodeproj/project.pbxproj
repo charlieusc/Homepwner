@@ -13,6 +13,9 @@
 		5E9E63741D53C991003FAEB2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9E63721D53C991003FAEB2 /* Main.storyboard */; };
 		5E9E63761D53C991003FAEB2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E9E63751D53C991003FAEB2 /* Assets.xcassets */; };
 		5E9E63791D53C991003FAEB2 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5E9E63771D53C991003FAEB2 /* LaunchScreen.storyboard */; };
+		5E9E63851D53CE39003FAEB2 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63831D53CE39003FAEB2 /* BNRItemsViewController.m */; };
+		5E9E63881D53CF75003FAEB2 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63871D53CF75003FAEB2 /* BNRItem.m */; };
+		5E9E638B1D53D1A6003FAEB2 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +29,12 @@
 		5E9E63751D53C991003FAEB2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		5E9E63781D53C991003FAEB2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5E9E637A1D53C991003FAEB2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5E9E63831D53CE39003FAEB2 /* BNRItemsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemsViewController.m; sourceTree = "<group>"; };
+		5E9E63841D53CE39003FAEB2 /* BNRItemsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemsViewController.h; sourceTree = "<group>"; };
+		5E9E63861D53CF75003FAEB2 /* BNRItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItem.h; sourceTree = "<group>"; };
+		5E9E63871D53CF75003FAEB2 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
+		5E9E63891D53D1A6003FAEB2 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
+		5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +67,12 @@
 		5E9E63681D53C991003FAEB2 /* BNRHomepwner */ = {
 			isa = PBXGroup;
 			children = (
+				5E9E63861D53CF75003FAEB2 /* BNRItem.h */,
+				5E9E63871D53CF75003FAEB2 /* BNRItem.m */,
+				5E9E63891D53D1A6003FAEB2 /* BNRItemStore.h */,
+				5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */,
+				5E9E63831D53CE39003FAEB2 /* BNRItemsViewController.m */,
+				5E9E63841D53CE39003FAEB2 /* BNRItemsViewController.h */,
 				5E9E636C1D53C991003FAEB2 /* AppDelegate.h */,
 				5E9E636D1D53C991003FAEB2 /* AppDelegate.m */,
 				5E9E636F1D53C991003FAEB2 /* ViewController.h */,
@@ -151,7 +166,10 @@
 			files = (
 				5E9E63711D53C991003FAEB2 /* ViewController.m in Sources */,
 				5E9E636E1D53C991003FAEB2 /* AppDelegate.m in Sources */,
+				5E9E63881D53CF75003FAEB2 /* BNRItem.m in Sources */,
+				5E9E63851D53CE39003FAEB2 /* BNRItemsViewController.m in Sources */,
 				5E9E636B1D53C991003FAEB2 /* main.m in Sources */,
+				5E9E638B1D53D1A6003FAEB2 /* BNRItemStore.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -300,6 +318,7 @@
 				5E9E637F1D53C991003FAEB2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
