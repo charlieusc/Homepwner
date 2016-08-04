@@ -14,10 +14,10 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E9E63421D53C748003FAEB2"
-               BuildableName = "Homepwner.app"
-               BlueprintName = "Homepwner"
-               ReferencedContainer = "container:Homepwner.xcodeproj">
+               BlueprintIdentifier = "5E9E63651D53C991003FAEB2"
+               BuildableName = "BNRHomepwner.app"
+               BlueprintName = "BNRHomepwner"
+               ReferencedContainer = "container:BNRHomepwner.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>
@@ -32,10 +32,10 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E9E63421D53C748003FAEB2"
-            BuildableName = "Homepwner.app"
-            BlueprintName = "Homepwner"
-            ReferencedContainer = "container:Homepwner.xcodeproj">
+            BlueprintIdentifier = "5E9E63651D53C991003FAEB2"
+            BuildableName = "BNRHomepwner.app"
+            BlueprintName = "BNRHomepwner"
+            ReferencedContainer = "container:BNRHomepwner.xcodeproj">
          </BuildableReference>
       </MacroExpansion>
       <AdditionalOptions>
@@ -55,10 +55,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E9E63421D53C748003FAEB2"
-            BuildableName = "Homepwner.app"
-            BlueprintName = "Homepwner"
-            ReferencedContainer = "container:Homepwner.xcodeproj">
+            BlueprintIdentifier = "5E9E63651D53C991003FAEB2"
+            BuildableName = "BNRHomepwner.app"
+            BlueprintName = "BNRHomepwner"
+            ReferencedContainer = "container:BNRHomepwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
       <AdditionalOptions>
@@ -74,10 +74,10 @@
          runnableDebuggingMode = "0">
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "5E9E63421D53C748003FAEB2"
-            BuildableName = "Homepwner.app"
-            BlueprintName = "Homepwner"
-            ReferencedContainer = "container:Homepwner.xcodeproj">
+            BlueprintIdentifier = "5E9E63651D53C991003FAEB2"
+            BuildableName = "BNRHomepwner.app"
+            BlueprintName = "BNRHomepwner"
+            ReferencedContainer = "container:BNRHomepwner.xcodeproj">
          </BuildableReference>
       </BuildableProductRunnable>
    </ProfileAction>
