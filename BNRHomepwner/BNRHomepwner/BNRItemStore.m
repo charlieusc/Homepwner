@@ -11,7 +11,8 @@
 
 @interface BNRItemStore ()
 
-@property (nonatomic) NSMutableArray *privateItems;
+@property (nonatomic) NSMutableArray *expenItems;
+@property (nonatomic) NSMutableArray *cheapItems;
 
 @end
 
@@ -36,20 +37,30 @@
 {
     self = [super init];
     if(self){
-        _privateItems = [[NSMutableArray alloc] init];
+        _expenItems = [[NSMutableArray alloc] init];
+        _cheapItems = [[NSMutableArray alloc] init];
     }
     return self;
 }
 
-- (NSArray *)allItems
+- (NSArray *)allCheapItems
 {
-    return self.privateItems;
+    return self.cheapItems;
+}
+
+- (NSArray *)allExpenItems
+{
+    return self.expenItems;
 }
 
 - (BNRItem *)createItem
 {
     BNRItem *item = [BNRItem randomItem];
-    [self.privateItems addObject:item];
+    if(item.valueInDollars>50){
+        [self.expenItems addObject:item];
+    }else{
+        [self.cheapItems addObject:item];
+    }
     return item;
 }
 

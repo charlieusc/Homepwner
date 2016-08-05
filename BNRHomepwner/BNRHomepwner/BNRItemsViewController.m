@@ -14,9 +14,9 @@
 
 - (instancetype)init
 {
-    self = [super initWithStyle:UITableViewStylePlain];
+    self = [super initWithStyle:UITableViewStyleGrouped];
     if(self){
-        for(int i=0; i<5; i++){
+        for(int i=0; i<10; i++){
             [[BNRItemStore sharedStore] createItem];
         }
     }
@@ -28,20 +28,31 @@
     return [self init];
 }
 
+-(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+    //return 2;
+    NSInteger i = 0;
+    if([[[BNRItemStore sharedStore] allExpenItems] count] > 0) i++;
+    if([[[BNRItemStore sharedStore] allCheapItems] count] > 0) i++;
+    return i;
+}
+
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return [[[BNRItemStore sharedStore] allItems] count];
+    if(section==0) return [[[BNRItemStore sharedStore] allCheapItems] count];
+    return [[[BNRItemStore sharedStore] allExpenItems] count];
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"UITableViewCell" forIndexPath:indexPath];
-    
-    NSArray *items = [[BNRItemStore sharedStore] allItems];
+    NSArray *items;
+    if(indexPath.section == 0){
+        items = [[BNRItemStore sharedStore] allCheapItems];
+    }else{
+        items = [[BNRItemStore sharedStore] allExpenItems];
+    }
     BNRItem *item = items[indexPath.row];
-    
     cell.textLabel.text = [item description];
-    
     return cell;
 }
 
