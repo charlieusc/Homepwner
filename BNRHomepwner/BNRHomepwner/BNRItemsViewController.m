@@ -67,6 +67,36 @@
     
     return cell;
 }
+/*
+- (CGRect)rectForSection:(NSInteger)section
+{
+    CGRect ret;
+    CGRect screen = [[UIScreen mainScreen] bounds];
+    if(section == 0){
+        ret = CGRectMake(0, 20, screen.size.width, 350);
+    }else{
+        ret = CGRectMake(400, 20, screen.size.width, 350);
+    }
+    return ret;
+}
+*/
+
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    if(indexPath.section == 0){
+        if(indexPath.row < [[[BNRItemStore sharedStore] allCheapItems] count]){
+            return 60.0;
+        }
+    }else{
+        if(indexPath.row < [[[BNRItemStore sharedStore] allExpenItems] count]){
+            return 60.0;
+        }
+    }
+    return 44.0;
+}
+
+
+
 
 - (void)viewDidLoad
 {
