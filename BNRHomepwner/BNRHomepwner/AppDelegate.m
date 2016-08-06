@@ -22,7 +22,6 @@
     
     BNRItemsViewController *itemsViewController = [[BNRItemsViewController alloc] init];
     self.window.rootViewController = itemsViewController;
-    
     self.window.backgroundColor = [UIColor whiteColor];
     [self.window makeKeyAndVisible];
     return YES;

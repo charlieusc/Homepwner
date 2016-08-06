@@ -19,6 +19,10 @@
         for(int i=0; i<10; i++){
             [[BNRItemStore sharedStore] createItem];
         }
+        //set an image as the background to tableview
+        UIImageView *tempImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"table_background.png"]];
+        [tempImageView setFrame:self.tableView.frame];
+        self.tableView.backgroundView = tempImageView;
     }
     return self;
 }
@@ -67,6 +71,14 @@
     
     return cell;
 }
+//set cell background to clear
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    
+    cell.backgroundColor = [UIColor clearColor];
+    cell.backgroundView.backgroundColor = [UIColor clearColor];
+}
+
 /*
 - (CGRect)rectForSection:(NSInteger)section
 {
