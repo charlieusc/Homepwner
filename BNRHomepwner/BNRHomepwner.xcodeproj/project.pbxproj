@@ -16,6 +16,7 @@
 		5E9E63851D53CE39003FAEB2 /* BNRItemsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63831D53CE39003FAEB2 /* BNRItemsViewController.m */; };
 		5E9E63881D53CF75003FAEB2 /* BNRItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63871D53CF75003FAEB2 /* BNRItem.m */; };
 		5E9E638B1D53D1A6003FAEB2 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */; };
+		5E9E638F1D5668C5003FAEB2 /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9E638E1D5668C5003FAEB2 /* HeaderView.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		5E9E63871D53CF75003FAEB2 /* BNRItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItem.m; sourceTree = "<group>"; };
 		5E9E63891D53D1A6003FAEB2 /* BNRItemStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRItemStore.h; sourceTree = "<group>"; };
 		5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRItemStore.m; sourceTree = "<group>"; };
+		5E9E638E1D5668C5003FAEB2 /* HeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */,
 				5E9E63841D53CE39003FAEB2 /* BNRItemsViewController.h */,
 				5E9E63831D53CE39003FAEB2 /* BNRItemsViewController.m */,
+				5E9E638E1D5668C5003FAEB2 /* HeaderView.xib */,
 				5E9E636C1D53C991003FAEB2 /* AppDelegate.h */,
 				5E9E636D1D53C991003FAEB2 /* AppDelegate.m */,
 				5E9E636F1D53C991003FAEB2 /* ViewController.h */,
@@ -154,6 +157,7 @@
 				5E9E63791D53C991003FAEB2 /* LaunchScreen.storyboard in Resources */,
 				5E9E63761D53C991003FAEB2 /* Assets.xcassets in Resources */,
 				5E9E63741D53C991003FAEB2 /* Main.storyboard in Resources */,
+				5E9E638F1D5668C5003FAEB2 /* HeaderView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
