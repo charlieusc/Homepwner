@@ -18,6 +18,7 @@
 		5E9E638B1D53D1A6003FAEB2 /* BNRItemStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E638A1D53D1A6003FAEB2 /* BNRItemStore.m */; };
 		5E9E63951D5941DF003FAEB2 /* BNRDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63931D5941DF003FAEB2 /* BNRDetailViewController.m */; };
 		5E9E63961D5941DF003FAEB2 /* BNRDetailViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5E9E63941D5941DF003FAEB2 /* BNRDetailViewController.xib */; };
+		5E9E639E1D5AF229003FAEB2 /* BNRImageStore.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E639D1D5AF229003FAEB2 /* BNRImageStore.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,8 @@
 		5E9E63921D5941DF003FAEB2 /* BNRDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRDetailViewController.h; sourceTree = "<group>"; };
 		5E9E63931D5941DF003FAEB2 /* BNRDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRDetailViewController.m; sourceTree = "<group>"; };
 		5E9E63941D5941DF003FAEB2 /* BNRDetailViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BNRDetailViewController.xib; sourceTree = "<group>"; };
+		5E9E639C1D5AF229003FAEB2 /* BNRImageStore.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BNRImageStore.h; sourceTree = "<group>"; };
+		5E9E639D1D5AF229003FAEB2 /* BNRImageStore.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BNRImageStore.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +86,8 @@
 				5E9E63921D5941DF003FAEB2 /* BNRDetailViewController.h */,
 				5E9E63931D5941DF003FAEB2 /* BNRDetailViewController.m */,
 				5E9E63941D5941DF003FAEB2 /* BNRDetailViewController.xib */,
+				5E9E639C1D5AF229003FAEB2 /* BNRImageStore.h */,
+				5E9E639D1D5AF229003FAEB2 /* BNRImageStore.m */,
 				5E9E636F1D53C991003FAEB2 /* ViewController.h */,
 				5E9E63701D53C991003FAEB2 /* ViewController.m */,
 				5E9E63721D53C991003FAEB2 /* Main.storyboard */,
@@ -133,6 +138,7 @@
 				TargetAttributes = {
 					5E9E63651D53C991003FAEB2 = {
 						CreatedOnToolsVersion = 7.3;
+						DevelopmentTeam = 33B7UJPHYY;
 					};
 				};
 			};
@@ -177,6 +183,7 @@
 				5E9E636E1D53C991003FAEB2 /* AppDelegate.m in Sources */,
 				5E9E63881D53CF75003FAEB2 /* BNRItem.m in Sources */,
 				5E9E63951D5941DF003FAEB2 /* BNRDetailViewController.m in Sources */,
+				5E9E639E1D5AF229003FAEB2 /* BNRImageStore.m in Sources */,
 				5E9E63851D53CE39003FAEB2 /* BNRItemsViewController.m in Sources */,
 				5E9E636B1D53C991003FAEB2 /* main.m in Sources */,
 				5E9E638B1D53D1A6003FAEB2 /* BNRItemStore.m in Sources */,
@@ -291,10 +298,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BNRHomepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jialinyang.BNRHomepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -302,10 +311,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = BNRHomepwner/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = jialinyang.BNRHomepwner;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
