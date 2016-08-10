@@ -9,7 +9,7 @@
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
 
-@interface BNRDetailViewController ()
+@interface BNRDetailViewController () <UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
 @property (weak, nonatomic) IBOutlet UITextField *serialNumberField;
 @property (weak, nonatomic) IBOutlet UITextField *valueField;
@@ -18,6 +18,14 @@
 @end
 
 @implementation BNRDetailViewController
+
+- (instancetype)init
+{
+    self = [super init];
+    if(self){
+    }
+    return self;
+}
 
 - (void)viewWillAppear:(BOOL)animated
 {
@@ -57,10 +65,31 @@
     self.navigationItem.title =_item.itemName;
 }
 
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return YES;
+}
 
+- (void)textFieldDidBeginEditing:(UITextField *)textField
+{
+    if(textField == self.valueField){
+    UIBarButtonItem *bbi = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemDone target:self.valueField action:@selector(resignFirstResponder)];
+        self.navigationItem.rightBarButtonItem = bbi;
+    }
+}
 
+- (BOOL)textFieldShouldEndEditing:(UITextField *)textField
+{
+    self.navigationItem.rightBarButtonItem = nil;
+    return YES;
+}
 
-
+- (IBAction)ChangeItemDate:(id)sender {
+    BNRDateChangeViewController *dateChangeViewController = [[BNRDateChangeViewController alloc] init];
+    dateChangeViewController.item = self.item;
+    [self.navigationController pushViewController:dateChangeViewController animated:YES];
+}
 
 
 
