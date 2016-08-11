@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5E72C5C11D5CEEC9000942D6 /* CrossHairView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E72C5C01D5CEEC9000942D6 /* CrossHairView.m */; };
 		5E9E636B1D53C991003FAEB2 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E636A1D53C991003FAEB2 /* main.m */; };
 		5E9E636E1D53C991003FAEB2 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E636D1D53C991003FAEB2 /* AppDelegate.m */; };
 		5E9E63711D53C991003FAEB2 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5E9E63701D53C991003FAEB2 /* ViewController.m */; };
@@ -22,6 +23,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		5E72C5BF1D5CEEC9000942D6 /* CrossHairView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CrossHairView.h; sourceTree = "<group>"; };
+		5E72C5C01D5CEEC9000942D6 /* CrossHairView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CrossHairView.m; sourceTree = "<group>"; };
 		5E9E63661D53C991003FAEB2 /* BNRHomepwner.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BNRHomepwner.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5E9E636A1D53C991003FAEB2 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		5E9E636C1D53C991003FAEB2 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -85,6 +88,8 @@
 				5E9E636D1D53C991003FAEB2 /* AppDelegate.m */,
 				5E9E63921D5941DF003FAEB2 /* BNRDetailViewController.h */,
 				5E9E63931D5941DF003FAEB2 /* BNRDetailViewController.m */,
+				5E72C5BF1D5CEEC9000942D6 /* CrossHairView.h */,
+				5E72C5C01D5CEEC9000942D6 /* CrossHairView.m */,
 				5E9E63941D5941DF003FAEB2 /* BNRDetailViewController.xib */,
 				5E9E639C1D5AF229003FAEB2 /* BNRImageStore.h */,
 				5E9E639D1D5AF229003FAEB2 /* BNRImageStore.m */,
@@ -182,6 +187,7 @@
 				5E9E63711D53C991003FAEB2 /* ViewController.m in Sources */,
 				5E9E636E1D53C991003FAEB2 /* AppDelegate.m in Sources */,
 				5E9E63881D53CF75003FAEB2 /* BNRItem.m in Sources */,
+				5E72C5C11D5CEEC9000942D6 /* CrossHairView.m in Sources */,
 				5E9E63951D5941DF003FAEB2 /* BNRDetailViewController.m in Sources */,
 				5E9E639E1D5AF229003FAEB2 /* BNRImageStore.m in Sources */,
 				5E9E63851D53CE39003FAEB2 /* BNRItemsViewController.m in Sources */,

@@ -9,6 +9,7 @@
 #import "BNRDetailViewController.h"
 #import "BNRItem.h"
 #import "BNRImageStore.h"
+#import "CrossHairView.h"
 
 @interface BNRDetailViewController ()<UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
 @property (weak, nonatomic) IBOutlet UITextField *nameField;
@@ -24,7 +25,7 @@
 
 - (void)imagePickerController:(UIImagePickerController *)picker didFinishPickingMediaWithInfo:(NSDictionary<NSString *,id> *)info
 {
-    UIImage *image = info[UIImagePickerControllerOriginalImage];
+    UIImage *image = info[UIImagePickerControllerEditedImage];
     
     [[BNRImageStore sharedStore] setImage:image forKey:self.item.itemKey];
     
@@ -41,6 +42,10 @@
         imagePicker.sourceType = UIImagePickerControllerSourceTypePhotoLibrary;
     }
     imagePicker.delegate = self;
+    [imagePicker setAllowsEditing:YES];
+    CrossHairView *chv = [[CrossHairView alloc] init];
+    [chv setFrame:CGRectMake(0, 0, [imagePicker view].bounds.size.width, [imagePicker view].bounds.size.height - 52)];
+    [imagePicker setCameraOverlayView:chv];
     [self presentViewController:imagePicker animated:YES completion:nil];
 }
 
@@ -97,6 +102,11 @@
     [self.view endEditing:YES];
 }
 
+- (IBAction)deletePicture:(id)sender {
+    [[BNRImageStore sharedStore] deleteImageForKey:self.item.itemKey];
+    [self.imageView setImage:nil];
+    //self.imageView.image = nil;
+}
 
 
 
