@@ -10,6 +10,7 @@
 
 @interface BNRImageViewController : UIViewController
 
-@property (nonatomic, strong) UIImage *image;
+//@property (nonatomic, strong) UIImage *image;
+- (instancetype)initWithImage:(UIImage *)image;
 
 @end

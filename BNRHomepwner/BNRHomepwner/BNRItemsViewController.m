@@ -76,8 +76,7 @@
             
             CGRect rect = [self.view convertRect:strongCell.thumbnailView.bounds fromView:strongCell.thumbnailView];
             
-            BNRImageViewController *ivc = [[BNRImageViewController alloc] init];
-            ivc.image = img;
+            BNRImageViewController *ivc = [[BNRImageViewController alloc] initWithImage:img];
             /*
             
             

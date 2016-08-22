@@ -8,34 +8,49 @@
 
 #import "BNRImageViewController.h"
 
-@interface BNRImageViewController ()
-
+@interface BNRImageViewController () <UIScrollViewDelegate>
+@property (nonatomic, strong) UIImageView *imView;
 @end
 
 @implementation BNRImageViewController
 
-- (instancetype)init
+- (instancetype)initWithImage:(UIImage *)image
 {
     self = [super init];
     if(self){
         UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
         self.navigationItem.rightBarButtonItem = cancelItem;
+        //self.image = image;
+        self.imView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, image.size.width, image.size.width)];
+        self.imView.image = image;
     }
     return self;
 }
 
 - (void)loadView
 {
-    UIImageView *imageView =[[UIImageView alloc] init];
-    imageView.contentMode = UIViewContentModeScaleAspectFit;
-    self.view = imageView;
+    UIScrollView *scrollView = [[UIScrollView alloc] initWithFrame:self.imView.frame];
+    NSLog(@"%f", self.imView.frame.size.height);
+    scrollView.contentSize = self.imView.frame.size;
+    scrollView.delegate = self;
+    scrollView.minimumZoomScale = 1;
+    scrollView.maximumZoomScale = 5.0;
+    [scrollView setMultipleTouchEnabled:YES];
+    scrollView.pagingEnabled = NO;
+    scrollView.backgroundColor = [UIColor clearColor];
+    [scrollView addSubview:self.imView];
+    self.view = scrollView;
+}
+
+-(UIView*)viewForZoomingInScrollView:(UIScrollView *)scrollView
+{
+    NSLog(@"zoomed!");
+    return self.imView;
 }
 
 - (void)viewWillAppear:(BOOL)animated
 {
     [super viewWillAppear:animated];
-    UIImageView *imageView = (UIImageView *)self.view;
-    imageView.image = self.image;
 }
 
 - (void)viewDidLoad {
