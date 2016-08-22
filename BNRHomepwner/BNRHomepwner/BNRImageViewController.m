@@ -14,6 +14,16 @@
 
 @implementation BNRImageViewController
 
+- (instancetype)init
+{
+    self = [super init];
+    if(self){
+        UIBarButtonItem *cancelItem = [[UIBarButtonItem alloc] initWithBarButtonSystemItem:UIBarButtonSystemItemCancel target:self action:@selector(cancel:)];
+        self.navigationItem.rightBarButtonItem = cancelItem;
+    }
+    return self;
+}
+
 - (void)loadView
 {
     UIImageView *imageView =[[UIImageView alloc] init];
@@ -36,6 +46,11 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)cancel:(id)sender
+{
+    [self.presentingViewController dismissViewControllerAnimated:YES completion:nil];
 }
 
 /*

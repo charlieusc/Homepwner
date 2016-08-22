@@ -78,15 +78,24 @@
             
             BNRImageViewController *ivc = [[BNRImageViewController alloc] init];
             ivc.image = img;
+            /*
+            
             
             self.imagePopover = [[UIPopoverController alloc] initWithContentViewController:ivc];
             
             self.imagePopover.delegate = self;
             self.imagePopover.popoverContentSize = CGSizeMake(600, 600);
+            
+            
             [self.imagePopover presentPopoverFromRect:rect
                                                inView:self.view
                              permittedArrowDirections:UIPopoverArrowDirectionAny
                                              animated:YES];
+             */
+            UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:ivc];
+            navController.modalPresentationStyle = UIModalPresentationFormSheet;
+            [self presentViewController:navController animated:YES completion:nil];
+             
         }
     };
     return cell;
